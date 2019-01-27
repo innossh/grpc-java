@@ -54,7 +54,8 @@ public class HelloWorldClient {
   /** Say hello to server. */
   public void greet(String name) {
     logger.info("Will try to greet " + name + " ...");
-    HelloRequest request = HelloRequest.newBuilder().setName(name).build();
+//    HelloRequest request = HelloRequest.newBuilder().setName(name).build();
+    HelloRequest request = HelloRequest.newBuilder().setId(123456L).build();
     HelloReply response;
     try {
       response = blockingStub.sayHello(request);
